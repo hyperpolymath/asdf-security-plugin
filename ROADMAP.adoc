@@ -1,0 +1,48 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+= ROADMAP
+:toc:
+
+== Current State: Project Skeleton
+
+The repository currently contains only infrastructure:
+
+* [x] Multi-forge mirror workflow (GitLab, Codeberg, Bitbucket)
+* [x] Instant-sync propagation workflow
+* [x] AI assistant configuration (CLAUDE.md)
+* [ ] Plugin implementation
+* [ ] Documentation
+* [ ] Tests
+
+== Roadmap
+
+=== Phase 0: Specification (Current)
+
+* [ ] Define what security tools/versions the plugin will manage
+* [ ] Document target use cases
+* [ ] Establish plugin architecture
+
+=== Phase 1: Core Plugin
+
+* [ ] Implement asdf plugin interface scripts:
+** `bin/list-all` - list available versions
+** `bin/download` - download specific version
+** `bin/install` - install specific version
+* [ ] Add version verification (checksums, signatures)
+* [ ] Basic documentation
+
+=== Phase 2: Security Hardening
+
+* [ ] GPG signature verification for downloads
+* [ ] SHA256 checksum validation
+* [ ] Supply chain security documentation
+* [ ] Reproducible builds support
+
+=== Phase 3: Extended Features
+
+* [ ] Multiple security tool support
+* [ ] Platform detection and binary selection
+* [ ] Integration with Guix/Nix for hermetic installs
+
+---
+
+_Detailed milestones will be added once project specification is complete._
