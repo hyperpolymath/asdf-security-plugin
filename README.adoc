@@ -1,0 +1,60 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+= asdf-security-plugin
+:toc: macro
+:toc-title: Contents
+:toclevels: 2
+
+**Repository project specification - implementation pending**
+
+toc::[]
+
+== Status
+
+[IMPORTANT]
+====
+This repository is currently a *project skeleton* with CI/CD infrastructure only.
+No plugin code has been implemented yet.
+====
+
+== Overview
+
+`asdf-security-plugin` is intended to be a security-focused plugin for the https://asdf-vm.com/[asdf version manager].
+
+== Current Contents
+
+[cols="2,3",options="header"]
+|===
+| Component | Description
+
+| `.github/workflows/mirror.yml`
+| Multi-forge mirroring to GitLab, Codeberg, and Bitbucket (SHA-pinned actions)
+
+| `.github/workflows/instant-sync.yml`
+| Automatic propagation to forge network on push/release
+
+| `.claude/CLAUDE.md`
+| AI assistant language policy (Hyperpolymath Standard)
+
+| `README.md`
+| Placeholder (to be superseded by this document)
+|===
+
+== Planned Functionality
+
+_To be specified._
+
+== Development Standards
+
+Per the Hyperpolymath Language Policy:
+
+* **Primary languages**: Bash/POSIX Shell (for asdf plugin scripts), Rust (for compiled tooling)
+* **Package management**: Guix (primary), Nix (fallback)
+* **Security**: SHA256+ hashing, HTTPS only, no hardcoded secrets, SHA-pinned dependencies
+
+== License
+
+AGPL-3.0-or-later
+
+---
+
+_Project specification will be uploaded shortly._
