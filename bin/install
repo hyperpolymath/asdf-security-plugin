@@ -9,3 +9,10 @@ plugin_dir="$(dirname "$(dirname "$current_script_path")")"
 source "$plugin_dir/lib/utils.bash"
 
 install_version "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
+
+# Verify installation
+if [[ -x "$ASDF_INSTALL_PATH/bin/asdf-security" ]]; then
+  echo "asdf-security $ASDF_INSTALL_VERSION installed successfully"
+else
+  fail "Installation failed - asdf-security binary not created"
+fi
